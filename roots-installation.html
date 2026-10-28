@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ROOTS Installation | Autumn Arts</title>
+
+    <!-- BROWSER TAB ICON -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #faf8f3;
+            color: #30352f;
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+
+        header {
+            background: linear-gradient(135deg, #fff3df, #f5e5cf);
+            text-align: center;
+            padding: 65px 22px;
+        }
+
+        .eyebrow {
+            color: #a85127;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            color: #a85127;
+            font-size: clamp(34px, 8vw, 60px);
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            font-style: italic;
+            color: #344d37;
+        }
+
+        /* MAIN INSTALLATION CONTENT */
+
+        .roots-content {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 65px 25px 90px;
+        }
+
+        /* PHOTOGRAPHS */
+
+
+        .roots-image {
+            width: fit-content;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 12px;
+            background: #faf8f3;
+            border-radius: 18px;
+            box-shadow: 0 5px 24px rgba(0, 0, 0, 0.07);
+        }
+
+        .roots-image img {
+            display: block;
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 700px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+
+        /* DESCRIPTION */
+
+        .roots-description {
+            max-width: 800px;
+            margin: 65px auto;
+            text-align: center;
+        }
+
+        .roots-description h2 {
+            color: #a85127;
+            font-size: 30px;
+            margin-bottom: 28px;
+        }
+
+        
+        .roots-description h3 {
+            color: #344d37;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+
+        .roots-description p {
+            color: #44483f;
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+/* ========================================
+   NAVIGATION BAR - DESKTOP
+======================================== */
+
+.site-nav {
+    background: #fffaf2;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px #0001;
+    padding: 16px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #36513c;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #a85127;
+    text-decoration: underline;
+}
+
+/* Hide mobile menu controls on desktop */
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+}
+
+
+/* ========================================
+   NAVIGATION BAR - MOBILE
+======================================== */
+
+@media (max-width: 749px) {
+
+    .site-nav {
+        padding: 0;
+        position: sticky;
+        top: 0;
+    }
+
+    /* Mobile menu button */
+
+    .menu-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 22px;
+        color: #36513c;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        font-size: 26px;
+        line-height: 1;
+    }
+
+    /* Hide links until menu is opened */
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: #fffaf2;
+        border-top: 1px solid #e8dccb;
+    }
+
+    /* Show links when hamburger is clicked */
+
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 16px 22px;
+        border-bottom: 1px solid #eee4d6;
+        font-size: 15px;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+}
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            font-size: 13px;
+            color: #777;
+        }
+
+        @media (max-width: 749px) {
+            .site-nav {
+                position: static;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- NAVIGATION BAR -->
+    <nav class="site-nav">
+
+        <!-- MOBILE MENU TOGGLE -->
+        <input
+            type="checkbox"
+            id="menu-toggle"
+            class="menu-toggle"
+        >
+
+        <label for="menu-toggle" class="menu-button">
+            <span>AUTUMN ARTS</span>
+            <span class="hamburger">☰</span>
+        </label>
+
+        <!-- NAVIGATION LINKS -->
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="autumn-imprints.html">
+                Fall Imprints
+            </a>
+
+            <a href="harvest-form.html">
+                Harvest Form
+            </a>
+
+            <a href="layers-of-autumn.html">
+                Layers of Autumn
+            </a>
+
+            <a href="nature-in-our-hands.html">
+                Nature in Our Hands
+            </a>
+
+            <a href="roots-installation.html" class="active">
+                ROOTS Installation
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- PAGE HEADER -->
+
+    <header>
+        <div class="eyebrow">AUTUMN ARTS</div>
+
+        <h1>ROOTS Installation</h1>
+
+        <p class="subtitle">
+            Our Leaves, Our Stories, Our Community
+        </p>
+    </header>
+
+
+    <!-- INSTALLATION CONTENT -->
+
+    <main class="roots-content">
+
+        <!-- FIRST PHOTOGRAPH -->
+
+        <figure class="roots-image">
+            <img
+                src="images/roots-mural.png"
+                alt="ROOTS community leaf installation"
+                loading="lazy"
+            >
+        </figure>
+
+
+        <!-- INSTALLATION DESCRIPTION -->
+
+<section class="roots-description">
+
+    <h2>Growing Together, Belonging as One</h2>
+
+    <h3>A Celebration of Family, Identity and School Community</h3>
+
+        <p>
+            Our ROOTS installation is a collective expression of the
+            families, individuals and relationships that make our
+            school community unique.
+        </p>
+
+        <p>
+            Each child was invited to bring leaves representing the
+            members of their family or, in some cases, a single leaf
+            representing themselves. The children carefully coated
+            their leaves with glue to create a lasting shine and
+            added their names using markers, giving each leaf a
+            personal identity.
+        </p>
+
+        <p>
+            Suspended from strings within a wooden frame, the leaves
+            come together to form a meaningful representation of our
+            school community. Each leaf is unique in shape, size and
+            character, just as every child and family brings something
+            special to our shared environment.
+        </p>
+
+        <p>
+            <strong>
+                ROOTS reminds us that although we come from different
+                families and backgrounds, we are connected through
+                belonging, respect and shared experiences.
+            </strong>
+        </p>
+
+        <p>
+            Together, these individual leaves create something
+            greater than themselves—a beautiful reflection of who
+            we are as a school community, rooted in connection
+            and growing together.
+        </p>
+
+</section>
+
+
+        </section>
+
+
+        <!-- SECOND PHOTOGRAPH -->
+
+        <figure class="roots-image">
+            <img
+                src="images/roots-tcsa.png"
+                alt="Details of the children's leaves in the ROOTS installation"
+                loading="lazy"
+            >
+        </figure>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        AUTUMN ARTS | ROOTS Installation
+    </footer>
+
+
+</body>
+</html>
