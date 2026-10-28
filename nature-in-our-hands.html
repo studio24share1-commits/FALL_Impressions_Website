@@ -1,0 +1,719 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nature in Our Hands | Autumn Arts</title><style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #faf8f3;
+  color: #30352f;
+  line-height: 1.7;
+}
+
+header {
+  text-align: center;
+  padding: 65px 22px;
+  background: linear-gradient(135deg, #fff3df, #f5e5cf);
+}
+
+.eyebrow {
+  color: #a56b2c;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(34px, 8vw, 60px);
+  margin: 10px 0;
+  color: #a85127;
+}
+
+.subtitle {
+  font-style: italic;
+  font-size: 18px;
+}
+
+
+/* ========================================
+   ARTISTIC JOURNEY INTRODUCTION
+======================================== */
+
+.intro {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 55px 30px 65px;
+    text-align: center;
+}
+
+.intro h2 {
+    color: #a85127;
+    font-size: 30px;
+    margin-bottom: 28px;
+}
+
+.intro p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #44483f;
+    margin-bottom: 20px;
+}
+
+
+.gallery {
+  max-width: 900px;
+  margin: auto;
+  padding: 15px 18px 60px;
+}
+
+.art-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  box-shadow: 0 5px 24px rgba(0,0,0,.07);
+}
+
+.art-card img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  background: #f3efe7;
+  padding: 14px;
+}
+
+.art-info {
+  padding: 25px;
+}
+
+.level {
+  color: #b16b2e;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.art-info h2 {
+  margin: 8px 0;
+  color: #344d37;
+  font-size: 24px;
+}
+
+.art-info p {
+  margin-bottom: 10px;
+}
+
+.focus {
+  color: #755638;
+  font-style: italic;
+}
+
+.closing {
+  padding: 65px 25px;
+  text-align: center;
+  background: #e9eddf;
+}
+
+.closing h2 {
+  color: #36513c;
+}
+
+.closing blockquote {
+  max-width: 680px;
+  margin: 25px auto;
+  font-size: 22px;
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 13px;
+  color: #777;
+}
+
+@media (min-width: 750px) {
+  .art-card {
+    display: grid;
+    grid-template-columns: 46% 54%;
+    align-items: center;
+  }
+
+  .art-card img {
+    height: 360px;
+  }
+}
+
+
+
+/* ========================================
+   NAVIGATION BAR - DESKTOP
+======================================== */
+
+.site-nav {
+    background: #fffaf2;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px #0001;
+    padding: 16px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #36513c;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #a85127;
+    text-decoration: underline;
+}
+
+/* Hide mobile menu controls on desktop */
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+}
+
+
+/* ========================================
+   NAVIGATION BAR - MOBILE
+======================================== */
+
+@media (max-width: 749px) {
+
+    .site-nav {
+        padding: 0;
+        position: sticky;
+        top: 0;
+    }
+
+    /* Mobile menu button */
+
+    .menu-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 22px;
+        color: #36513c;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        font-size: 26px;
+        line-height: 1;
+    }
+
+    /* Hide links until menu is opened */
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: #fffaf2;
+        border-top: 1px solid #e8dccb;
+    }
+
+    /* Show links when hamburger is clicked */
+
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 16px 22px;
+        border-bottom: 1px solid #eee4d6;
+        font-size: 15px;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+}
+
+
+/* ========================================
+   HOMEPAGE GRID
+======================================== */
+
+.home-grid {
+    max-width: 1040px;
+    margin: 30px auto 70px;
+    padding: 0 18px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+
+/* ========================================
+   HOMEPAGE TILES
+======================================== */
+
+.home-tile {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 24px #0001;
+    text-decoration: none;
+    color: #344d37;
+    transition: transform 0.2s;
+}
+
+.home-tile:hover {
+    transform: translateY(-5px);
+}
+
+.home-tile img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.home-tile div {
+    padding: 20px;
+}
+
+.home-tile h2 {
+    margin: 0 0 8px;
+}
+
+.home-tile p {
+    margin: 0;
+}
+
+
+/* ========================================
+   ARTWORK GALLERY
+======================================== */
+
+.gallery-note {
+    max-width: 760px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 0 20px;
+    color: #755638;
+}
+
+.art-card img {
+    object-fit: contain;
+}
+
+.art-card .art-info {
+    align-self: center;
+}
+
+
+
+/* ========================================
+   MOBILE RESPONSIVENESS
+======================================== */
+
+@media (max-width: 749px) {
+    .site-nav {
+        position: static;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+    <!-- NAVIGATION BAR -->
+    <nav class="site-nav">
+
+        <!-- MOBILE MENU TOGGLE -->
+        <input
+            type="checkbox"
+            id="menu-toggle"
+            class="menu-toggle"
+        >
+
+        <label for="menu-toggle" class="menu-button">
+            <span>AUTUMN ARTS</span>
+            <span class="hamburger">☰</span>
+        </label>
+
+        <!-- NAVIGATION LINKS -->
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="autumn-imprints.html">
+                Fall Imprints
+            </a>
+
+            <a href="harvest-form.html">
+                Harvest Form
+            </a>
+
+            <a href="layers-of-autumn.html">
+                Layers of Autumn
+            </a>
+
+            <a href="nature-in-our-hands.html">
+                Nature in Our Hands
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- PAGE HEADER -->
+    <header>
+
+        <div class="eyebrow">AUTUMN ARTS</div>
+
+        <h1>NATURE in our HANDS</h1>
+
+        <p class="subtitle">
+            Creating Art Through Natural Materials
+        </p>
+
+    </header>
+
+
+
+
+    <!-- ARTISTIC JOURNEY INTRODUCTION -->
+    <section class="intro">
+
+        <h2>Our Artistic Journey</h2>
+
+        <p>
+            NATURE in our HANDS invites students to discover
+            the artistic possibilities of natural materials
+            while developing an appreciation for their textures,
+            forms and individual characteristics.
+        </p>
+
+        <p>
+            Toddlers and PreCASA children begin with lacing
+            activities using wooden log slices, developing
+            hand-eye coordination, concentration and
+            purposeful movement.
+        </p>
+
+        <p>
+            CASA students progress to constructing owls from
+            natural wood, introducing three-dimensional form
+            and the symbolic significance of the owl as
+            a messenger of knowledge.
+        </p>
+
+        <p>
+            Elementary students expand their exploration
+            through natural-material collage, assemblage
+            and increasingly intentional compositions.
+        </p>
+
+        <p>
+            By Grades 7 and 8, students consider the relationship
+            between natural materials, artistic expression
+            and personal meaning, transforming simple elements
+            of nature into thoughtful works of art.
+        </p>
+
+    </section>
+
+
+    <!-- ARTWORK GALLERY -->
+    <main class="gallery">
+
+        <!-- ARTWORK 01 -->
+        <article class="art-card">
+            <img
+                src="images/nature-in-our-hands-01.jpg"
+                alt="Nature in Our Hands slide 1"
+                loading="lazy"
+            >
+
+            <div class="art-info">
+                <div class="level">Artwork 01</div>
+                <h2>Nature in Our Hands</h2>
+
+                <p>
+                    View the artwork and accompanying explanation
+                    in the original presentation slide.
+                </p>
+
+                <p class="focus">Visual journey collection</p>
+            </div>
+        </article>
+
+
+        <!-- ARTWORK 02 -->
+        <article class="art-card">
+            <img
+                src="images/nature-in-our-hands-02.jpg"
+                alt="Nature in Our Hands slide 2"
+                loading="lazy"
+            >
+
+            <div class="art-info">
+                <div class="level">Artwork 02</div>
+                <h2>Nature in Our Hands</h2>
+
+                <p>
+                    View the artwork and accompanying explanation
+                    in the original presentation slide.
+                </p>
+
+                <p class="focus">Visual journey collection</p>
+            </div>
+        </article>
+
+
+        <!-- ARTWORK 03 -->
+        <article class="art-card">
+            <img
+                src="images/nature-in-our-hands-03.jpg"
+                alt="Nature in Our Hands slide 3"
+                loading="lazy"
+            >
+
+            <div class="art-info">
+                <div class="level">Artwork 03</div>
+                <h2>Nature in Our Hands</h2>
+
+                <p>
+                    View the artwork and accompanying explanation
+                    in the original presentation slide.
+                </p>
+
+                <p class="focus">Visual journey collection</p>
+            </div>
+        </article>
+
+
+        <!-- ARTWORK 04 -->
+        <article class="art-card">
+            <img
+                src="images/nature-in-our-hands-04.jpg"
+                alt="Nature in Our Hands slide 4"
+                loading="lazy"
+            >
+
+            <div class="art-info">
+                <div class="level">Artwork 04</div>
+                <h2>Nature in Our Hands</h2>
+
+                <p>
+                    View the artwork and accompanying explanation
+                    in the original presentation slide.
+                </p>
+
+                <p class="focus">Visual journey collection</p>
+            </div>
+        </article>
+
+
+        <!-- ARTWORK 05 -->
+        <article class="art-card">
+            <img
+                src="images/nature-in-our-hands-05.jpg"
+                alt="Nature in Our Hands slide 5"
+                loading="lazy"
+            >
+
+            <div class="art-info">
+                <div class="level">Artwork 05</div>
+                <h2>Nature in Our Hands</h2>
+
+                <p>
+                    View the artwork and accompanying explanation
+                    in the original presentation slide.
+                </p>
+
+                <p class="focus">Visual journey collection</p>
+            </div>
+        </article>
+
+
+        <!-- ARTWORK 06 -->
+        <article class="art-card">
+            <img
+                src="images/nature-in-our-hands-06.jpg"
+                alt="Nature in Our Hands slide 6"
+                loading="lazy"
+            >
+
+            <div class="art-info">
+                <div class="level">Artwork 06</div>
+                <h2>Nature in Our Hands</h2>
+
+                <p>
+                    View the artwork and accompanying explanation
+                    in the original presentation slide.
+                </p>
+
+                <p class="focus">Visual journey collection</p>
+            </div>
+        </article>
+
+
+        <!-- ARTWORK 07 -->
+        <article class="art-card">
+            <img
+                src="images/nature-in-our-hands-07.jpg"
+                alt="Nature in Our Hands slide 7"
+                loading="lazy"
+            >
+
+            <div class="art-info">
+                <div class="level">Artwork 07</div>
+                <h2>Nature in Our Hands</h2>
+
+                <p>
+                    View the artwork and accompanying explanation
+                    in the original presentation slide.
+                </p>
+
+                <p class="focus">Visual journey collection</p>
+            </div>
+        </article>
+
+
+        <!-- ARTWORK 08 -->
+        <article class="art-card">
+            <img
+                src="images/nature-in-our-hands-08.jpg"
+                alt="Nature in Our Hands slide 8"
+                loading="lazy"
+            >
+
+            <div class="art-info">
+                <div class="level">Artwork 08</div>
+                <h2>Nature in Our Hands</h2>
+
+                <p>
+                    View the artwork and accompanying explanation
+                    in the original presentation slide.
+                </p>
+
+                <p class="focus">Visual journey collection</p>
+            </div>
+        </article>
+
+
+        <!-- ARTWORK 09 -->
+        <article class="art-card">
+            <img
+                src="images/nature-in-our-hands-09.jpg"
+                alt="Nature in Our Hands slide 9"
+                loading="lazy"
+            >
+
+            <div class="art-info">
+                <div class="level">Artwork 09</div>
+                <h2>Nature in Our Hands</h2>
+
+                <p>
+                    View the artwork and accompanying explanation
+                    in the original presentation slide.
+                </p>
+
+                <p class="focus">Visual journey collection</p>
+            </div>
+        </article>
+
+
+        <!-- ARTWORK 10 -->
+        <article class="art-card">
+            <img
+                src="images/nature-in-our-hands-10.jpg"
+                alt="Nature in Our Hands slide 10"
+                loading="lazy"
+            >
+
+            <div class="art-info">
+                <div class="level">Artwork 10</div>
+                <h2>Nature in Our Hands</h2>
+
+                <p>
+                    View the artwork and accompanying explanation
+                    in the original presentation slide.
+                </p>
+
+                <p class="focus">Visual journey collection</p>
+            </div>
+        </article>
+
+
+        <!-- ARTWORK 11 -->
+        <article class="art-card">
+            <img
+                src="images/nature-in-our-hands-11.jpg"
+                alt="Nature in Our Hands slide 11"
+                loading="lazy"
+            >
+
+            <div class="art-info">
+                <div class="level">Artwork 11</div>
+                <h2>Nature in Our Hands</h2>
+
+                <p>
+                    View the artwork and accompanying explanation
+                    in the original presentation slide.
+                </p>
+
+                <p class="focus">Visual journey collection</p>
+            </div>
+        </article>
+
+    </main>
+
+
+    <!-- CLOSING SECTION -->
+    <section class="closing">
+
+        <h2>The Final Impression</h2>
+
+        <p>
+            Continue exploring the other
+            Autumn Arts collections.
+        </p>
+
+        <p>
+            <a href="index.html">
+                ← Return to all collections
+            </a>
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        AUTUMN ARTS | FALL Imprints
+    </footer>
+
+</body>
+</html>
