@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Autumn Arts Schedule</title>
+
+    <!-- BROWSER TAB ICON -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #faf8f3;
+            color: #344d37;
+        }
+
+        /* PAGE HEADER */
+
+        header {
+            background: linear-gradient(135deg, #fff3df, #f5e5cf);
+            text-align: center;
+            padding: 80px 20px 65px;
+        }
+
+        .eyebrow {
+            color: #a85127;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            color: #a85127;
+            font-size: clamp(34px, 5vw, 52px);
+            margin: 0 0 25px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            font-style: italic;
+            color: #344d37;
+        }
+
+        /* SCHEDULE IMAGE */
+
+        .schedule-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px 90px;
+            text-align: center;
+        }
+
+        .schedule-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 5px 24px rgba(0, 0, 0, 0.07);
+        }
+
+        /* DESKTOP NAVIGATION */
+
+        .site-nav {
+            background: #fffaf2;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px #0001;
+            padding: 16px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #36513c;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #a85127;
+            text-decoration: underline;
+        }
+
+        .menu-toggle,
+        .menu-button {
+            display: none;
+        }
+
+        /* MOBILE NAVIGATION */
+
+        @media (max-width: 749px) {
+
+            .site-nav {
+                padding: 0;
+            }
+
+            .menu-button {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 18px 22px;
+                color: #36513c;
+                font-weight: 700;
+                cursor: pointer;
+            }
+
+            .hamburger {
+                font-size: 26px;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                border-top: 1px solid #e8dccb;
+            }
+
+            .menu-toggle:checked ~ .nav-links {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 16px 22px;
+                border-bottom: 1px solid #eee4d6;
+                font-size: 15px;
+            }
+
+            header {
+                padding: 55px 20px;
+            }
+
+            .schedule-content {
+                padding: 30px 12px 60px;
+            }
+
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            font-size: 12px;
+            color: #755638;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <nav class="site-nav">
+
+        <input
+            type="checkbox"
+            id="menu-toggle"
+            class="menu-toggle"
+        >
+
+        <label for="menu-toggle" class="menu-button">
+            <span>AUTUMN ARTS</span>
+            <span class="hamburger">☰</span>
+        </label>
+
+        <!-- NAVIGATION LINKS -->
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="schedule.html">
+                Schedule
+            </a>
+
+            <a href="roots-installation.html">
+                ROOTS
+            </a>
+
+            <a href="autumn-imprints.html">
+                Fall Imprints
+            </a>
+
+            <a href="harvest-form.html">
+                Harvest Form
+            </a>
+
+            <a href="layers-of-autumn.html">
+                Layers of Autumn
+            </a>
+
+            <a href="nature-in-our-hands.html">
+                Nature in Our Hands
+            </a>
+
+        </div>
+
+    </nav>
+
+    </nav>
+
+    <!-- PAGE HEADER -->
+
+    <header>
+
+        <div class="eyebrow">AUTUMN ARTS</div>
+
+        <h1>Event Schedule</h1>
+
+        <p class="subtitle">
+            Thursday, October 29, 2026
+        </p>
+
+    </header>
+
+    <!-- SCHEDULE IMAGE -->
+
+    <main class="schedule-content">
+
+        <img
+            src="images/schedule.png"
+            alt="Autumn Arts Event Schedule"
+            class="schedule-image"
+        >
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        AUTUMN ARTS | 2026
+    </footer>
+
+</body>
+</html>
